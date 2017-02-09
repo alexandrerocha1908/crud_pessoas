@@ -1,0 +1,27 @@
+<div id="list">
+	<div ng-controller="ListPessoasCtrl">
+		<h1 class="text-center">Contact List</h1>
+		<div class="row">
+			<div class="col-sm-11">
+				<button ng-click="logout()" class="btn pull-right">Logout</button>
+				<button ng-click="createPerson()" class="btn  btn-info pull-left">New Contact</button>
+			</div>
+		</div>
+		<table class=" table table-striped table-hover">
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Email</th>
+			</tr>
+			</thead>
+			<tr ng-repeat="t in teste">
+				<td>{{ t.name }}</td>
+				<td>{{ t.fone }}</td>
+				<td>{{ t.email }}</td>
+				<td><button class="btn btn-primary" ng-click="detailPerson(t.id)">Detail</button></td>
+				<td><button class="btn btn-danger" ng-click="deletePerson(t.id)">Delete</button></td>
+			</tr>
+		</table>
+	</div>
+</div>
